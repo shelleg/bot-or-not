@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Space Invaders</title>
+    <title>Bot or Not?</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="{{ url_for('static', filename='spaceinvaders/css/core.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='spaceinvaders/css/typeography.css') }}">
@@ -40,12 +40,8 @@
     </style>
 </head>
 <body>
-<div id="starfield"></div>
-<div id="gamecontainer">
-    <canvas id="gameCanvas" width="850"></canvas>
-</div>
-<div id="info">
-        <span><a id="muteLink" href="#" onclick="toggleMute()">TOGGLE SOUND</a></span>
+<div class="logo">
+    <img src="../static/images/logo.png"/>
 </div>
 <div class="webcam-container flex-row">
     <div class="controller-panels" id="controller">
