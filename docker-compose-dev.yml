@@ -28,8 +28,8 @@ services:
   spaceinvaders:
     build: .
     #image: tikalk/si-model-trainer:latest
-    #ports:
-    #  - "5000:5000"
+    ports:
+      - "5000:5000"
     networks:
       - proxy
     labels:
