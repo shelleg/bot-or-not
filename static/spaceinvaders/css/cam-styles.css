@@ -22,6 +22,7 @@ html, body {
 }
 body {
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 button:focus {
@@ -370,4 +371,16 @@ header b {
 
 .center-horiz {
   justify-content: center;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 240px;
+  right: 0;
 }
