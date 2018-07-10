@@ -19,7 +19,7 @@ CORS(app, automatic_options=True)
 
 @app.route('/')
 def space_invaders():
-    return render_template('%s.html' % "spaceinvaders")
+    return render_template('%s.html' % "botornot")
 
 @app.route('/favicon.ico')
 def favicon():
