@@ -37,4 +37,5 @@ services:
       traefik.port: 5000
       traefik.frontend.passHostHeader: "true"
       traefik.frontend.rule: "Host:si.hub.tikal.io"
-
+    volumes:
+      - $PWD:/app
