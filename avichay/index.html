@@ -26,6 +26,7 @@
         const btn1 = document.getElementById('btn1')
         const btnTrain = document.getElementById('train')
         const btnStart = document.getElementById('start')
+        const btnPlayGame = document.getElementById('playGame')
 
         video = document.getElementById('webcam')
         await webcamUtils.init(document.getElementById('webcam'))
@@ -56,6 +57,10 @@
           this.remove()
         }
 
+        btnPlayGame.onclick = function () {
+          playGame()
+        }
+
       })()
 
       let x = 0
@@ -69,6 +74,15 @@
         detect()
       }
 
+      async function playGame () {
+        webcamUtils.capture()
+        const imageData = model.captureImageFromCanvas(canvas)
+        const predictions = await model.test(imageData)
+        console.log(predictions)
+        x++
+        playGame()
+      }
+
     </script>
 
 
@@ -79,6 +93,7 @@
   <button id="btn1">Sample as item #1</button>
   <button id="train">Train Model</button>
   <button id="start">Start detection</button>
+  <button id="playGame">play game</button>
 
 </body>
 </html>
