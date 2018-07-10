@@ -184,14 +184,13 @@ button span.disabled{
 }
 
 .params-webcam-row {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 35px;
 }
 .webcam-box-outer {
-  background: black;
   border: 1px solid #585858;
   border-radius: 4px;
   box-sizing: border-box;
@@ -295,7 +294,6 @@ button span.disabled{
   margin-top: 18px;
 }
 .thumb-box-outer {
-  background: black;
   border: 1px solid #585858;
   border-radius: 4px;
   box-sizing: border-box;

@@ -27,7 +27,7 @@
         html, body {
             overflow: hidden;
             width: 850px;
-            height: 100vh;
+            /*height: 100vh;*/
             margin: 0 auto;
         }
 
@@ -41,7 +41,8 @@
 </head>
 <body>
 <div class="logo">
-    <img src="../static/images/logo.png"/>
+    <img class="main" src="../static/images/logo.png"/>
+    <img class="logo-marker" src="../static/images/222.png"/>
 </div>
 <div class="webcam-container flex-row">
     <div class="controller-panels" id="controller">
@@ -51,17 +52,17 @@
             <!-- Big buttons. -->
             <div class="panel-row big-buttons">
                 <button id="train">
-                    <img width="66" height="66" src="../static/images/button.svg"/>
+                    <img width="66" height="66" src="../static/images/button.png"/>
                     <span id="train-status">TRAIN/LOAD MODEL</span>
                 </button>
                 <button id="predict">
-                    <img width="66" height="66" src="../static/images/button.svg"/>
+                    <img width="66" height="66" src="../static/images/button.png"/>
                     <span>PLAY</span>
                 </button>
             </div><!-- /.panel-row -->
 
             <div class="panel-row params-webcam-row">
-                <div id="paramsForm">
+                <div id="paramsForm" style="display: none">
                     <label>Learning rate</label>
                     <select id="inpLearningRate">
                         <option value="0.00001">0.00001</option>
@@ -121,7 +122,7 @@
 
             </div><!-- /.panel-row -->
 
-            <div class="panel-row panel-row-middle">
+            <div class="panel-row panel-row-middle center-horiz">
                 <div class="panel-cell panel-cell-left">
                     <div class="thumb-box">
                         <div class="thumb-box-outer">
@@ -134,10 +135,6 @@
                             <span id="left-total" class="total">0</span> examples
                         </p>
                     </div>
-                </div><!-- ./panel-cell -->
-
-                <div class="panel-cell panel-cell-center panel-cell-fill">
-                    <img height="108" width="129" src="../static/images/joystick.png"/>
                 </div><!-- ./panel-cell -->
 
                 <div class="panel-cell panel-cell-right">
